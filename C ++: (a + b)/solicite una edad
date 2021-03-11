@@ -1,0 +1,26 @@
+//*7. Escriba un programa que solicite una edad (un entero) e indique en la 
+salida estándar si la edad introducida está en el rango [18-25].*/
+
+#include <Arduino.h>
+
+
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+Serial.println("\nDigite su edad ");
+while (!Serial.available()){}
+int edad = Serial.parseInt();
+Serial.println(edad);
+
+
+if((edad >=18)&&(edad <=25)){
+  Serial.println("\nSu edad esta en el rango de (18 - 25) ");
+}
+
+else{
+  Serial.println("\nSu edad esta fuera de rango" );
+}
+}

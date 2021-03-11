@@ -1,0 +1,67 @@
+/*12. Hacer un menú que considere las siguientes opciones:
+	Caso 1: Cubo de un numero
+	Caso 2: Numero par o impar
+	Case 3: salir.
+*/
+
+#include <Arduino.h>
+
+int b;
+void setup() {
+  Serial.begin(9600);
+
+}
+void cone(){
+  Serial.println("Digite un numero: ");
+    while (!Serial.available()){}
+    int num = Serial.parseInt();
+    Serial.println( "El cubo del numero es: " + String(pow(num,3)) );
+}
+void ctwo(){
+   Serial.println("Digite un numero: ");
+     while (!Serial.available()){}
+     int b = Serial.parseInt(); 
+     Serial.println(b);
+     if (b % 2 ==0)
+     {
+       Serial.println("el  numero es par: ");
+     }
+       else
+       {
+         Serial.println("el  numero es impar: ");
+       }
+         
+}
+
+void loop() {
+  
+  Serial.println("\tMENU ");
+  Serial.println("\n1- Cubo de un numero ");
+  Serial.println("\n2- Numero par o impar ");
+  Serial.println("\n3- Salir ");
+  Serial.println("\n4- Opcion:  ");
+  while (!Serial.available()){}
+  int opc = Serial.parseInt();
+  Serial.println(opc);
+  
+  switch (opc)
+  {
+  case 1:
+    cone();
+   
+    break;
+  case 2:
+    ctwo();
+    
+    
+    
+    break;
+  case 3:
+    break;
+  
+  default:
+    break;
+  }
+  
+
+}

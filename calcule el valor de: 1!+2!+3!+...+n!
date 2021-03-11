@@ -1,0 +1,25 @@
+/*10. Escriba un programa que calcule el valor de: 1!+2!+3!+...+n! 
+(suma de factoriales).*/
+
+#include <Arduino.h>
+
+int suma=0, n, factorial =1;
+void setup() {
+  Serial.begin(9600);
+}
+
+
+void loop() {
+  Serial.println("Digiteel total de elemntos a sumar: ");
+     while (!Serial.available()){}
+     int n = Serial.parseInt(); 
+     Serial.println(n);
+  for (int i=1;i<=n;i++)
+  {
+    factorial *=i;
+    suma += factorial;
+  }
+  Serial.println("La suma factrorial es " + String(suma));
+  
+    
+}

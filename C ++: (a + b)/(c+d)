@@ -1,0 +1,31 @@
+//2. Escribe la siguiente expresión como expresión en C++: (a+b)/(c+d) 
+
+
+#include <Arduino.h>
+
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+Serial.println("\nDigite el valor de a: ");
+while (!Serial.available()){}
+float a = Serial.parseFloat();
+
+
+Serial.println("\nDigite el valor de b: ");
+while (!Serial.available()){}
+float b = Serial.parseFloat();
+
+Serial.println("\nDigite el valor de c: ");
+while (!Serial.available()){}
+float c = Serial.parseFloat();
+
+Serial.println("\nDigite el valor de d: ");
+while (!Serial.available()){}
+float d = Serial.parseFloat();
+
+Serial.println("Elressultado es =" + String((a+b) / (c+d)) );
+
+}

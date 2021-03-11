@@ -1,0 +1,31 @@
+//*1. Escriba un programa que lea dos números y determine cuál de ellos es 
+el mayor.*/
+#include <Arduino.h>
+
+int n1, n2;
+
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+Serial.println("\nDigite el valor dos numeros ");
+while (!Serial.available()){}
+int n1 = Serial.parseInt();
+Serial.println(n1);
+
+while (!Serial.available()){}
+int n2 = Serial.parseInt();
+Serial.println(n2);
+
+if(n1 == n2){
+  Serial.println("\nAmbos numeros son iguales ");
+}
+else if (n1>n2){
+  Serial.println("\nEl mayor es  " + String (n1));
+}
+else{
+  Serial.println("\nEl mayor es" + String (n2));
+}
+}

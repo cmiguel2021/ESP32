@@ -1,0 +1,30 @@
+#include <Arduino.h>
+
+int x,y, aux;
+
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+Serial.println("\nDigite el valor de x: ");
+while (!Serial.available()){}
+int a = Serial.parseInt();
+Serial.println(x);
+
+
+Serial.println("\nDigite el valor de y: ");
+while (!Serial.available()){}
+int y = Serial.parseInt();
+Serial.println(y);
+
+aux = x;
+x = y ;
+y = aux;
+
+
+Serial.println("El nuevo valor de x es " + String(x));
+Serial.println("El nuevo valor de y es " + String(y));
+
+}

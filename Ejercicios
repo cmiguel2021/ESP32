@@ -1,0 +1,27 @@
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+Serial.println("\nDijite su edad: ");
+while (!Serial.available()){}
+int edad = Serial.parseInt();
+
+
+Serial.println("\nDijite su sexo: ");
+while (!Serial.available()){}
+char sexo = Serial.parseInt();
+
+
+Serial.println("\nDijite su altura: ");
+while (!Serial.available()){}
+float altura = Serial.parseInt();
+Serial.println("edad");
+Serial.println(edad);
+Serial.println("sexo");
+Serial.println(sexo);
+Serial.println("altura");
+Serial.println(altura);
+
+}

@@ -1,0 +1,30 @@
+//13. Hacer un que realize la serie fibonacci -> 1 1 2 3 5 8 13...n  
+
+#include <Arduino.h>
+
+int x=0, n, y =1, z=1;
+void setup() {
+  Serial.begin(9600);
+}
+
+
+void loop() {
+  do
+  {
+    Serial.println("Digite la cantidad de digitos de la serie:  ");
+     while (!Serial.available()){}
+     int n = Serial.parseInt(); 
+     Serial.println(n);
+     
+  } while (n<=0);
+
+  Serial.println("1");
+  for (int i = 1; i < n; i++)
+  {
+   z= x + y;
+   Serial.println(z);
+   x = y;
+   y = x;
+  }
+    
+}

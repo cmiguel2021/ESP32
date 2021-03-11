@@ -1,0 +1,63 @@
+/*10. Mostrar los meses del año, pidiéndole al usuario un número entre (1-12), 
+y mostrar el mes al que corresponde. */
+
+
+#include <Arduino.h>
+
+
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  
+  Serial.println("\nDigite un numero enre (1 - 12) ");
+  while (!Serial.available()){}
+  int numero = Serial.parseInt();
+  
+  
+  switch (numero)
+  {
+  case 1:
+    Serial.println("Enero");
+    break;
+  case 2:
+    Serial.println("Febrero");
+    break;
+  case 3:
+    Serial.println("Marzo");
+    break;
+  case 4:
+    Serial.println("Abril");
+    break;
+  case 5:
+    Serial.println("Mayo");
+    break;
+  case 6:
+    Serial.println("Junio");
+    break;
+  case 7:
+    Serial.println("Julio");
+    break;
+  case 8:
+    Serial.println("Agosto");
+    break;
+  case 9:
+    Serial.println("Septiembre");
+    break;
+  case 10:
+    Serial.println("Octubre");
+    break;
+  case 11:
+    Serial.println("Noviembre");
+    break;
+  case 12:
+    Serial.println("Diciembre");
+    break;
+  default:
+    break;
+  }
+
+
+}

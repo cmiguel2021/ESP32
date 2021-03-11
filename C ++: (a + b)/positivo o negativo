@@ -1,0 +1,28 @@
+//4. Comprobar si un número digitado por el usuario es positivo o negativo.
+
+#include <Arduino.h>
+
+
+
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+Serial.println("\nDigite un numero ");
+while (!Serial.available()){}
+int n1 = Serial.parseInt();
+Serial.println(n1);
+
+
+if(n1 == 0){
+  Serial.println("\nEl numero es cero ");
+}
+else if (n1>0){
+  Serial.println("\nEl numero es positivo " );
+}
+else{
+  Serial.println("\nEl numero es negativo" );
+}
+}
